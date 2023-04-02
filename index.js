@@ -1,7 +1,12 @@
 // Import packages 
+
 // Require inquirer to generate prompt questions
 const inquirer = require('inquirer');
-// Require fs to write to images.svg file
-const fs = require('fs');
-// Require logoSVG.generator to generate logo 
+// Require logoGenerator 
+const logoGenerator = require ('./lib/logoGenerator');
+// Require Shapes Classes
+const {Shape, Circle, Triangle, Square} = require('./lib/shapes');
 
+
+
+// Prompt
