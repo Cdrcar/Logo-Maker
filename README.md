@@ -19,7 +19,7 @@
 
   ## [Final Result](#table-of-contents)
   
-  ## [ Link go Walkthrough video](#table-of-contents)
+  ## [ Link to Walkthrough video](#table-of-contents)
 
   ## [Installation](#table-of-contents)
 
