@@ -3,19 +3,20 @@
 // Require inquirer to generate prompt questions
 const inquirer = require('inquirer');
 // Require logoGenerator 
-const logoGenerator = require ('./lib/logoGenerator');
+const logoGenerator = require('./lib/logoGenerator');
 // Require Shapes Classes
 const {Shape, Circle, Triangle, Square} = require('./lib/shapes');
+const writeFile = require('./lib/writeFile');
 
 
 
 // Prompt Questions to User
 const questions = [
     {
-        type: 'input',
+        type: 'list',
         name: 'shape',
         message: 'Designate a shape for your logo:',
-        choices: ['Triangle', 'Circle', 'Square']
+        choices: ['Triangle', 'Circle', 'Square'],
     },
 
     {
@@ -45,3 +46,16 @@ const questions = [
     }
 
 ];
+
+// Function to initialize Command Line Interface app
+function init(){
+    inquirer
+    .prompt (questions)
+    .then ((answers) => {
+        eval("svg = new " + answers.shape + "(answers.shape, answers.text, answers.textColor, answers.bgColor)");
+        writeFile(logoGenerator(svg.logoShape(), svg.logoText()));
+    })
+    .catch((err)=> console.log(err));
+}
+
+init();
