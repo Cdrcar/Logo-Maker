@@ -30,6 +30,8 @@
   
   ## [ Link to Walkthrough video](#table-of-contents)
 
+  [Link to walkthrough video](https://drive.google.com/file/d/17ngjPP-u0YIhP39wco6p5asDWGNUmXY0/view)
+
   ## [Installation](#table-of-contents)
 
   Install the following packages and dependencies:
