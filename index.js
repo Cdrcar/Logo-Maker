@@ -52,6 +52,7 @@ function init(){
     inquirer
     .prompt (questions)
     .then ((answers) => {
+        // Create "svg" new instance of a class passing the parameters deducted from the answers
         eval("svg = new " + answers.shape + "(answers.shape, answers.text, answers.textColor, answers.bgColor)");
         writeFile(logoGenerator(svg.logoShape(), svg.logoText()));
     })
